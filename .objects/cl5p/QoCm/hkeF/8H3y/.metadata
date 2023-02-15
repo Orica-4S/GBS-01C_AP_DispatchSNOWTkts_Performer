@@ -1,0 +1,14 @@
+﻿{
+  "Id": "8H3yPMHMK0y_ncDjL--9Kg",
+  "Reference": "s7ZI0mBsjkmeSXYMr6zq5g/8H3yPMHMK0y_ncDjL--9Kg",
+  "ParentRef": "s7ZI0mBsjkmeSXYMr6zq5g/hkeFPPvd5EaFjqhOVl1eQg",
+  "Name": "'Company CodeSort'",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Created": "2022-12-13T12:04:16.1527347Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=22.10.3.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=22.10.2.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2022-12-13T12:04:16.1527347Z"
+}

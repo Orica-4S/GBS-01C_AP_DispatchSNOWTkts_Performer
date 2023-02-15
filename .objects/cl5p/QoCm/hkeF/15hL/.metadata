@@ -1,0 +1,14 @@
+﻿{
+  "Id": "15hLY8ls502lFb8k14-IbA",
+  "Reference": "s7ZI0mBsjkmeSXYMr6zq5g/15hLY8ls502lFb8k14-IbA",
+  "ParentRef": "s7ZI0mBsjkmeSXYMr6zq5g/hkeFPPvd5EaFjqhOVl1eQg",
+  "Name": "Check App State 'Search'",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Created": "2022-12-13T12:04:16.0779063Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=22.10.3.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=22.10.2.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2022-12-13T12:04:16.0779063Z"
+}

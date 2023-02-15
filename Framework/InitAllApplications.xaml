@@ -1,0 +1,309 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Initialize_Applications" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:SNOW_Login;assembly=SNOW_Login" xmlns:s1="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property sap2010:Annotation.AnnotationText="Dictionary structure to store configuration data of the process (settings, constants and assets)." Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
+    <x:Property Name="io_UIBrowser" Type="InOutArgument(ui:UiElement)" />
+    <x:Property Name="io_SnowResult" Type="InOutArgument(sd:DataTable)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1102.6666666666667,3136</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Initialization_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="40">
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Management.Automation</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Excel.Model</x:String>
+      <x:String>SNOW_Login</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="61">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Management.Automation</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>TimeSpan2</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.CodeDom</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>SNOW_Login</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:Annotation.AnnotationText="Open applications used in the process and do necessary initialization procedures (e.g., login)." DisplayName="Initialize All Applications" sap:VirtualizedContainerService.HintSize="1112.6666666666667,3071.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_9">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="Config_AutomationStatusShet" />
+      <Variable x:TypeArguments="x:String" Name="Config_SnowFile" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log message (Initialize applications)" sap:VirtualizedContainerService.HintSize="1050.6666666666667,104.66666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Opening SNOW applications...&quot;]" />
+    <ui:KillProcess AppliesTo="{x:Null}" Process="{x:Null}" ContinueOnError="True" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="1050.6666666666667,145.33333333333334" sap2010:WorkflowViewState.IdRef="KillProcess_1" ProcessName="Chrome.exe" />
+    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="1050.6666666666667,140" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+      <ui:MultipleAssign.AssignOperations>
+        <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[Config_AutomationStatusShet]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">[in_Config("Sheet_AutomationStatus").tostring]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[Config_SnowFile]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">[in_Config("DownloadfolderPath").ToString.Replace("USER",system.Environment.UserName)+in_Config("SNOWdispatchfileName").ToString+now.Date.ToString("dd-MM-yyyy")+".xlsx"]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+        </scg:List>
+      </ui:MultipleAssign.AssignOperations>
+    </ui:MultipleAssign>
+    <TryCatch sap2010:Annotation.AnnotationText="This activity invokes the library that is used to login into Snow application" DisplayName="Snow Login Try Catch" sap:VirtualizedContainerService.HintSize="1050.6666666666667,1494" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <TryCatch.Try>
+        <Sequence sap:VirtualizedContainerService.HintSize="1012,1215.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_15">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <s:Snow_Login sap:VirtualizedContainerService.HintSize="950,152" sap2010:WorkflowViewState.IdRef="Snow_Login_1" in_Config="[in_Config]" out_UIBrowser="[io_UIBrowser]" />
+          <uix:NApplicationCard sap2010:Annotation.AnnotationText="This is used to click on Finance requests button which is one time activity" AttachMode="ByInstance" CloseMode="Never" DisplayName="Click finance requests" sap:VirtualizedContainerService.HintSize="950,901.3333333333334" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="[io_UIBrowser]" InteractionMode="Simulate" OpenMode="Never" OutUiElement="[io_UIBrowser]" ScopeGuid="d99b76e1-9d9e-44cc-90c8-646aac3f28aa" Version="V2" WindowResize="Maximize">
+            <uix:NApplicationCard.Body>
+              <ActivityAction x:TypeArguments="x:Object">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="916,722.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NCheckState DisplayName="Check for  'Finance requests Button-homepage'" sap:VirtualizedContainerService.HintSize="854,598" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="d99b76e1-9d9e-44cc-90c8-646aac3f28aa" Timeout="[Convert.ToInt32( in_Config(&quot;Max_Timeout&quot;).tostring)]" Version="V3">
+                    <uix:NCheckState.IfExists>
+                      <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="400,292.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uix:NClick ClickType="Double" DisplayName="Click 'Finance requests Button-homepage'" sap:VirtualizedContainerService.HintSize="338,168" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d99b76e1-9d9e-44cc-90c8-646aac3f28aa" Version="V3">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable BrowserURL="https://oricatest.service-now.com/do/navigator.do" ContentHash="B-ecsJGQ1k-m9CLR_HowAA" DesignTimeRectangle="169, 805, 184, 22" DesignTimeScaleFactor="1.5" ElementType="Text" FriendlyName="'Finance requests Button-homepage'" FullSelectorArgument="&lt;webctrl aria-role='navigation' tag='IFRAME' /&gt;&lt;webctrl aaname='All Finance Requests' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='navigation' tag='IFRAME' /&gt;&lt;webctrl aaname='All Finance Requests' tag='A' type='' class='menu nav_menu_header' check:innerText='All Finance Requests' /&gt;" Guid="b0a2db8a-2a09-4996-837f-2362dfcce215" ImageBase64="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" InformativeScreenshot="709862adb7af399de55efcc0815fc88b.png" Reference="4h0f-SN-AkGz1mVMCHgJNw/pGol5nWTiEGV_1aDukkYJQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ServiceNow Orica TEST Instance' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                  <uix:Target DesignTimeRectangle="11, 532, 105, 75" ElementType="Button" FriendlyName="'Finance requests Button-homepage'" FullSelectorArgument="&lt;webctrl aaname='Home' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Home' tag='BUTTON' type='' class='edge edge_button_bookmark edge_flyout_button' check:innerText='Home' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAG0AAABPCAYAAADhnEtrAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAQFSURBVHhe7dvPSxtBGMbx/nkevPRQLx6LFy9eKthLL168eEgPQqhgC4aCCkJBsAgiKJL4o8XURBrXWm0rFY9tz29ndp/dzO5MNlGXOu/2Fb7QzMxuIJ/sZhLoo/iP1N+v33/o6vpG8jyQCRqnQCZonAKZoHEKZILGKZAJGqdAVjK0YIOe772h1cAxV4JAViI0Ddao0FBd1SgnHMhKgmaCJS1QrWRwICsBmhMsrlxwIGOOZoHN0+vWGk2UFA5kjNEcYAlOsEbjKThjjnEgY4qWB5asKR8cyBiiBeuZ25+6JZ7+7LHWhuu5lkEgY4bmAHvVuaSrs116eVClEYwP16v07OMuNX/oY8oDBzJGaBZYlWZPLiloL9Foatyo8ZY2L/Sx5YADGRO0HmBXF9v0Ih5TX6hrnzsUfO1Q/XiJxjA+vL9OTX2OUxsuvEqzz+VxIGOAZoHN0Uw7erGbR/MYqyqA9HHB8aK6TUbrkznmcCDzHC0HTLf5AeN7a9HVZPatexVOt4xxCw5XrXmsp4HMY7Q+YLo7oemYwoHMUzQXWOvcWte9PaqNReY7WPf2WFWbjvRcON95xw4OZB6iDQgW5tyInNNhy9iIHGzQietYlQ1nX80+BTLP0KytuU5t211r0UBbfsdxUR2q7WWP8xcOZB6hfQ9ou71L71u6VeNqy0cLy/ty7VqfZKLN0XQTz98+oGYu9sMEMl83Ig2auQ3anTPR5ql25lrjTyATNEErrEHQLql+tEhjjTkazWnicIPqPW91glZg/dFOPi1gS9+/3jtIQSuwfmgB1fbj+UFSIF+y59AJWoH1QzNf7Iraomfno5JfTHqCCFqBCZorkAmaoBWWoLkCmaAJWmEJmiuQCZqgFZaguQKZoAlaYQmaK5BxQKvQiOOH4MfGfDEJ2j1Lo/2bBO2eCZorkPmKJrkCmaBxCmSCximQCRqnQCZonAKZX2jNlSkaqmw55rZo5slTmtnJjv9fgUzQOAUyvmjhWjUWNdv9qau9TOP68c5sd16fMxx3rL9uUW0yHldNLtv/A8eTQMYTLQLrvvCpxzFOfJ4EK14fIY2vtDL/js61WTGO9SyQeYgWv+MdRWiuW6Xx4odIU1RLfkS2YZI3h74arStLn9883p9AxvBKs1Ci9BWSh2bdWtXz9H6TCNrAPQiax59h2UDG8TPtbrdHF1p4e0xtSvwOZGXdiAyIhrnUc3oMCTKeaLoIKv4MMl7kW6Hpx9G5nefyLJD5hSblBzJB4xTIBI1TIBM0ToFM0DgFMkHjFMgEjVMgEzROgUzQOAUyQeMUyASNUyATNE6BTNA4BTJB4xTIBI1TIBM0ToFM0DgFMkHjFMgEjVMgEzROgUzQOAUyQePTDf0FLutYAz+awD0AAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NClick.Target>
+                        </uix:NClick>
+                      </Sequence>
+                    </uix:NCheckState.IfExists>
+                    <uix:NCheckState.IfNotExists>
+                      <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="400,368" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="338,104.66666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Error" Message="[&quot;Home Page not loaded&quot;]" />
+                        <Throw Exception="[new BusinessRuleException]" sap:VirtualizedContainerService.HintSize="338,98.66666666666667" sap2010:WorkflowViewState.IdRef="Throw_1" />
+                      </Sequence>
+                    </uix:NCheckState.IfNotExists>
+                    <uix:NCheckState.Target>
+                      <uix:TargetAnchorable BrowserURL="https://oricatest.service-now.com/do/navigator.do" ContentHash="B-ecsJGQ1k-m9CLR_HowAA" DesignTimeRectangle="169, 805, 184, 22" DesignTimeScaleFactor="1.5" ElementType="Text" FriendlyName="'Finance requests Button-homepage'" FullSelectorArgument="&lt;webctrl aria-role='navigation' tag='IFRAME' /&gt;&lt;webctrl aaname='All Finance Requests' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='navigation' tag='IFRAME' /&gt;&lt;webctrl aaname='All Finance Requests' tag='A' type='' class='menu nav_menu_header' check:innerText='All Finance Requests' /&gt;" Guid="b0a2db8a-2a09-4996-837f-2362dfcce215" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAALwAAAAaCAYAAAANDDZYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAdzSURBVHhe7Vorl6NKEL6/aBQOFReFQ+FQOBQuCofiF6BwKBwqDoWLwkWhbhQOV1vVj9DdNAmZObt7suE7p8/OsP2qqq+7Hj3/wY4dH4Sd8Ds+Cjvhd3wUdsLv+CjshN/xUdgJv+OjsE74oYLg6wu+vgKoBvHNxK2GCPtE9U1+gDrCMVGNPz2C6Mfmf9DkPGKdr+zCRn8WLpCZetGaAwc/hqzpYRQj/mmMPdTl+Qm/1rFK+Gvlw9fxCEdU6rHoxVcDPyZ8AEmeQ77Wqgs34k541FUMZddBZ7S2ziHxHUZ+D/UziVH/Jrbyax0rhO+hOOLEaQ11gv8eC/xiwY8Jn6E5dzyGJPwjXV2hDKjPA2/8T+B3Eb4v2M0eNyOM5wQV6UDaWe6OnfB/AFsIjxFoHWIftEXzXSq8A34L4SfoUnKRETAej2dISOFxs4wR/xThFyGNGE+/3zooYg9cRgoXvLiAzrL4rSshCX04ONQPm3MAP86guSoHWazDpy0g9lze1/UgLjqrTGze4ACOmDNISsv6N+jKBIIDDz3YfFkD6tLr2Eb4Wx2xuWdbcIx9A9ldPxjvBwmGRlZJtD262K+6jHiQaF5l7UvG/t8WXV4y2z63ym70M+0jOaC2+yZG6JtsthfxILTLuST81EFKpLgTfIQzhTXyAKj424SPIogcF8Kshhbj2QYV5tPenQTOyunsS58R0otzqFuKfVuoc0tfKQ/O67ghZHWLfRsoEz7eSc7KoZ/QwB5TsBtmbN62ziCgOd3TPOd0gZzF2JZ9eij/U9JvIfwELbukjqCmW0MTM6I7Phq/QbnbGrKQSOGgzdTYZ0B90ngH/FOFe0T9ZCGO9VAXmMt9l/CbZb9BQ+s7PiRlI3KTDEKX5sMw7YpdpgEuaIvMx28+HgTs011JyWiHnOwwr9E1eAmxdTEyaXUFLwg/tSl25OGMhPwWmAHijwn/oKlzrBF+YTg8nmhkGp9IxjGl4w1s8VBTe2J972GAXMfBw61NO0IT03rK4RBh3zHr9ETxyqtbMtHvCzLGETIzJBz4Wk5qjF/gCeGRCF0e8AMZNbPOyDMTsVCPuobQg2dHnG+O96cuZeMDxqwZI9qdea5vEn6z7Ph7iL+Hhi2ZLtEjRPd92fjVcf2gHTRMLaQueoms1exuEF4aNgaF73wwTWomrz8m/IMqjazQEFYJn4JxgO/KM127Feb+5TppuyAhj5FnL3fJ6QaxeD22N3SpUYWpJJJVkG65G7qVV2TQIAn/qNHt1mrE5iGOYyUmEcnHcT6/OsU+dK/IMUDFkuHvEP4F2YXNjumzcuMDwkcl9Iv9L6ETfmwgpsGL21DG9YYCf0z4lVvLxBrhbdUj0ddWSp3GAXrmLkvI0xh8ES+ahLeN5QSSIcPG/ct9xxjXk6s1WnU64Bw+d9mrkITXy5IyNDgEObQWZXPy+ZBRKKOMY+2cM4Lxgy0qcj4d0CUWYcpWwr8kuwhpmJyUh6VQNRdgEYsGG79kSENjeY6SYyjaD/ZbRCP8UAVi4HrTXLAQ6q8R3rbOoi+q5FrDSdSqeeNJTV6k7KYzCT/LM0MmhXzajfsX5HjWbOSZsR7STNeSy+qiR9aiAbm/J43pT8y/YjMu9zcI/7LsuBOM2+fEkzc3VIsQa3afYGiV4oFojn+C2siOFcJL97UWZqQQ0U2ghjvvQHgZy2JcXlwGGFX5hWv/bYSXrtriMbZjnfAEqqIwI6MuVM53jHy2MMXEFSqWCNpv+L6geH8L4WWYIvr+RHbMS3pKsCNB4KASsm3g13SD64UKDQGvTDkpqCnETHhhfFv8KsGFV5LXNyA8f0ewJEQImYy/Tniy+1oMT2Sj5/4M2v9F7mPVBxGE+qVwtswx4zHh6aLiuqR9zzKyl/JHMTwmg0FJZJThqpG3Mcicbkl4s/pxPziyr8z7Nsh+O58wvPS0ChOHyROL3S8l+OgV7kUKBTYb3QnPybzywCQh/75Gnrg3ILwktV8a99eEsSvzaDJ5Q7xAeFQYq9IsnvPJ0ORRWB5EpUvSK1UqDIPgeA/HW983NDwjPIKqGdQHvdj93UnqAZNn/ahjvJwQEZQSptiLKcuE5GZ7VNcWF6N5cy/7viC74NWi4oWHqKRDdM/VhN1DxZvJMjpyQZcTD9WJ9qN7OUF4kbgY1/8SMuwRynoDwlNZMmOhmAexqPE2VcpqvG4c631fITwzKCVLDvhJyerC99qxWtak9T1a3/ZeoPRbxQbCI3gJEONW5a1AhjvLOrxJbkr86K1hloXv0QGH9qmtLW3nQMDkkW8alpr9ZtmXulTfDObbW4ZNHqQ19hFZrZRTvoeobyeecTAZ4WUd1pmtuQpZ52bJ6zsQnqC9xqqvjcINr3qsGUvCc7AXWarz09xbX1pX+9mwjfBErpyRS39s0V9akRQe/WXlVSH7DPV1mfoVuEGeCxhrT1doski8WpM+U5Ycch2Z+9wq+wh9jReR+lpKL61mrXE4QxqIPsq7g2YHzcY6lKR1x44lFmXJN8dO+B0PsRN+x0dhJ/yOj8JO+B073hYAvwDFKu8nzLC4QAAAAABJRU5ErkJggg==" InformativeScreenshot="709862adb7af399de55efcc0815fc88b.png" Reference="4h0f-SN-AkGz1mVMCHgJNw/pGol5nWTiEGV_1aDukkYJQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ServiceNow Orica TEST Instance' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target DesignTimeRectangle="11, 532, 105, 75" ElementType="Button" FriendlyName="'Finance requests Button-homepage'" FullSelectorArgument="&lt;webctrl aaname='Home' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Home' tag='BUTTON' type='' class='edge edge_button_bookmark edge_flyout_button' check:innerText='Home' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAG0AAABPCAYAAADhnEtrAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAQFSURBVHhe7dvPSxtBGMbx/nkevPRQLx6LFy9eKthLL168eEgPQqhgC4aCCkJBsAgiKJL4o8XURBrXWm0rFY9tz29ndp/dzO5MNlGXOu/2Fb7QzMxuIJ/sZhLoo/iP1N+v33/o6vpG8jyQCRqnQCZonAKZoHEKZILGKZAJGqdAVjK0YIOe772h1cAxV4JAViI0Ddao0FBd1SgnHMhKgmaCJS1QrWRwICsBmhMsrlxwIGOOZoHN0+vWGk2UFA5kjNEcYAlOsEbjKThjjnEgY4qWB5asKR8cyBiiBeuZ25+6JZ7+7LHWhuu5lkEgY4bmAHvVuaSrs116eVClEYwP16v07OMuNX/oY8oDBzJGaBZYlWZPLiloL9Foatyo8ZY2L/Sx5YADGRO0HmBXF9v0Ih5TX6hrnzsUfO1Q/XiJxjA+vL9OTX2OUxsuvEqzz+VxIGOAZoHN0Uw7erGbR/MYqyqA9HHB8aK6TUbrkznmcCDzHC0HTLf5AeN7a9HVZPatexVOt4xxCw5XrXmsp4HMY7Q+YLo7oemYwoHMUzQXWOvcWte9PaqNReY7WPf2WFWbjvRcON95xw4OZB6iDQgW5tyInNNhy9iIHGzQietYlQ1nX80+BTLP0KytuU5t211r0UBbfsdxUR2q7WWP8xcOZB6hfQ9ou71L71u6VeNqy0cLy/ty7VqfZKLN0XQTz98+oGYu9sMEMl83Ig2auQ3anTPR5ql25lrjTyATNEErrEHQLql+tEhjjTkazWnicIPqPW91glZg/dFOPi1gS9+/3jtIQSuwfmgB1fbj+UFSIF+y59AJWoH1QzNf7Iraomfno5JfTHqCCFqBCZorkAmaoBWWoLkCmaAJWmEJmiuQCZqgFZaguQKZoAlaYQmaK5BxQKvQiOOH4MfGfDEJ2j1Lo/2bBO2eCZorkPmKJrkCmaBxCmSCximQCRqnQCZonAKZX2jNlSkaqmw55rZo5slTmtnJjv9fgUzQOAUyvmjhWjUWNdv9qau9TOP68c5sd16fMxx3rL9uUW0yHldNLtv/A8eTQMYTLQLrvvCpxzFOfJ4EK14fIY2vtDL/js61WTGO9SyQeYgWv+MdRWiuW6Xx4odIU1RLfkS2YZI3h74arStLn9883p9AxvBKs1Ci9BWSh2bdWtXz9H6TCNrAPQiax59h2UDG8TPtbrdHF1p4e0xtSvwOZGXdiAyIhrnUc3oMCTKeaLoIKv4MMl7kW6Hpx9G5nefyLJD5hSblBzJB4xTIBI1TIBM0ToFM0DgFMkHjFMgEjVMgEzROgUzQOAUyQeMUyASNUyATNE6BTNA4BTJB4xTIBI1TIBM0ToFM0DgFMkHjFMgEjVMgEzROgUzQOAUyQePTDf0FLutYAz+awD0AAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NCheckState.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NCheckState>
+                </Sequence>
+              </ActivityAction>
+            </uix:NApplicationCard.Body>
+            <uix:NApplicationCard.TargetApp>
+              <uix:TargetApp Area="0, 0, 0, 0" />
+            </uix:NApplicationCard.TargetApp>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </uix:NApplicationCard>
+        </Sequence>
+      </TryCatch.Try>
+      <TryCatch.Catches>
+        <Catch x:TypeArguments="s1:Exception" sap:VirtualizedContainerService.HintSize="1016.6666666666666,22" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ActivityAction x:TypeArguments="s1:Exception">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="s1:Exception" Name="exception" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Error login Sequence" sap:VirtualizedContainerService.HintSize="400,298.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_12">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="338,104.66666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Error" Message="[&quot;Unable to login to SNow Application&quot;+exception.Message]" />
+              <Rethrow sap:VirtualizedContainerService.HintSize="338,32" sap2010:WorkflowViewState.IdRef="Rethrow_1" />
+            </Sequence>
+          </ActivityAction>
+        </Catch>
+      </TryCatch.Catches>
+    </TryCatch>
+    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" sap2010:Annotation.AnnotationText="This is used to read the Automation status sheet of the Snow template file which will be updated once the tickets are processed.&#xA;The status of each ticket  has to be changed." DisplayName="Read Snow template file with Automation Status tab" sap:VirtualizedContainerService.HintSize="1050.6666666666667,874.6666666666666" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
+      <ueab:ExcelProcessScopeX.Body>
+        <ActivityAction x:TypeArguments="ui:IExcelProcess">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="602,716.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_10">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Snow template File" sap:VirtualizedContainerService.HintSize="540,594.6666666666666" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None" WorkbookPath="[Config_SnowFile]">
+              <ueab:ExcelApplicationCard.Body>
+                <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="506,305.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ueab:ReadRangeX DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="444,183.33333333333334" sap2010:WorkflowViewState.IdRef="ReadRangeX_1" Range="[Excel.Sheet( Config_AutomationStatusShet)]" SaveTo="[io_SnowResult]" />
+                  </Sequence>
+                </ActivityAction>
+              </ueab:ExcelApplicationCard.Body>
+            </ueab:ExcelApplicationCard>
+          </Sequence>
+        </ActivityAction>
+      </ueab:ExcelProcessScopeX.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ueab:ExcelProcessScopeX>
+  </Sequence>
+</Activity>

@@ -1,0 +1,14 @@
+﻿{
+  "Id": "6YxyfO-HMUi5zeFtcoC9qQ",
+  "Reference": "s7ZI0mBsjkmeSXYMr6zq5g/6YxyfO-HMUi5zeFtcoC9qQ",
+  "ParentRef": "s7ZI0mBsjkmeSXYMr6zq5g/hkeFPPvd5EaFjqhOVl1eQg",
+  "Name": "'Region CodeSort'",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Created": "2022-12-13T12:04:16.355329Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=22.10.3.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=22.10.2.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2022-12-13T12:04:16.355329Z"
+}

@@ -1,0 +1,11 @@
+﻿{
+  "Id": "cl5pTQDhdEyqMmjHKYJTtw",
+  "Reference": "s7ZI0mBsjkmeSXYMr6zq5g/cl5pTQDhdEyqMmjHKYJTtw",
+  "Name": "Snow",
+  "Type": "App",
+  "Created": "2022-12-13T12:03:40.2830119Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=22.10.2.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2022-12-13T12:03:40.2830119Z"
+}

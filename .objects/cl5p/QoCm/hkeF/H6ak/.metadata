@@ -1,0 +1,14 @@
+﻿{
+  "Id": "H6ak_SllQUigAyRtSC4IsQ",
+  "Reference": "s7ZI0mBsjkmeSXYMr6zq5g/H6ak_SllQUigAyRtSC4IsQ",
+  "ParentRef": "s7ZI0mBsjkmeSXYMr6zq5g/hkeFPPvd5EaFjqhOVl1eQg",
+  "Name": "Click 'Save & Exit'",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Created": "2022-12-13T12:04:16.1095195Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=22.10.3.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=22.10.2.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2022-12-13T12:04:16.1095195Z"
+}

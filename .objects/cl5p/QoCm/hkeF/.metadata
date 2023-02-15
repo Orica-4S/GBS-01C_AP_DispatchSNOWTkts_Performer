@@ -1,0 +1,12 @@
+﻿{
+  "Id": "hkeFPPvd5EaFjqhOVl1eQg",
+  "Reference": "s7ZI0mBsjkmeSXYMr6zq5g/hkeFPPvd5EaFjqhOVl1eQg",
+  "ParentRef": "s7ZI0mBsjkmeSXYMr6zq5g/QoCmtS7YIUCVBnHw-tRPFA",
+  "Name": "Snow Ticket update",
+  "Type": "Screen",
+  "Created": "2022-12-13T12:04:15.9395295Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=22.10.2.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2022-12-13T12:04:15.9395295Z"
+}

@@ -1,0 +1,15 @@
+﻿{
+  "Id": "z2kU5y7_gUOcQVkPCH5eDg",
+  "Reference": "s7ZI0mBsjkmeSXYMr6zq5g/z2kU5y7_gUOcQVkPCH5eDg",
+  "ParentRef": "s7ZI0mBsjkmeSXYMr6zq5g/hkeFPPvd5EaFjqhOVl1eQg",
+  "Name": "Select Item 'Search'",
+  "Description": "Number",
+  "Type": "Element",
+  "TaxonomyType": "Dropdown",
+  "Created": "2022-12-22T07:17:13.7793255Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=22.10.3.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=22.10.2.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2022-12-22T07:17:13.7793255Z"
+}
