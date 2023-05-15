@@ -3,7 +3,7 @@
   "description": "Robotic Enterprise Framework for GBS_01C_Perfoemer\r\nqueue-GBS-01C_AP_DispatchSNOWTkts",
   "main": "Main.xaml",
   "dependencies": {
-    "OricaUI_Lib": "[1.0.67]",
+    "OricaUI_Lib": "[1.0.68]",
     "SNOW_Login": "[1.0.10]",
     "UiPath.Excel.Activities": "[2.16.0]",
     "UiPath.Mail.Activities": "[1.18.2]",
