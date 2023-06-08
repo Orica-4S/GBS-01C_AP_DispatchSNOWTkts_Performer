@@ -3,19 +3,19 @@
   "description": "Robotic Enterprise Framework for GBS_01C_Perfoemer\r\nqueue-GBS-01C_AP_DispatchSNOWTkts",
   "main": "Main.xaml",
   "dependencies": {
-    "OricaUI_Lib": "[1.0.68]",
+    "OricaUI_Lib": "[1.0.71]",
     "SNOW_Login": "[1.0.10]",
     "UiPath.Excel.Activities": "[2.16.0]",
     "UiPath.Mail.Activities": "[1.18.2]",
     "UiPath.System.Activities": "[23.4.2]",
     "UiPath.Testing.Activities": "[22.10.0]",
-    "UiPath.UIAutomation.Activities": "[22.10.3]"
+    "UiPath.UIAutomation.Activities": "[22.10.7]"
   },
   "webServices": [],
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "22.10.3.0",
-  "projectVersion": "1.0.3",
+  "projectVersion": "1.0.4",
   "runtimeOptions": {
     "autoDispose": false,
     "netFrameworkLazyLoading": false,
